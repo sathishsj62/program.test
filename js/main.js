@@ -81,16 +81,31 @@ function v(num,j){
 //  Print numbers in words in reverse order//
 
 let n=["Zero","One","Two","Three","Four","Five","Six","Seven","Eight","Nine","Ten"];
-let x='845';
-let t=''
-for(i=x.length-1;i>=0;i--){
-   t+=x[i]
-}
-for(j=0;j<str.length;j++){
-    for(k=0;k<n.length;k++){
-        if(t[j]==k){
-            console.log(n[k])
-        }
-    }
-    
-} 
+   let x='845';
+   let str=""; 
+   for(i=x.length-1;i>=0;i--){
+      str+=x[i]
+   }
+   let c = "";
+   for(j=0;j<str.length;j++){
+       for(k=0;k<n.length;k++){
+           if(str[j]==k){
+			   c+=n[k];
+           }
+       }
+       
+   }  
+   console.log(c)
+
+///Given an array with numbers, write a program that prints nearest larger value of each index position//
+
+let n = prompt("enter the number");
+  let a = [1,2,3,4,5,6,7,8,9,10,30];
+  for(i=0 ;i<a.length; i++){
+	  if(n<a[i]){
+		  console.log(a[i]);
+		  break;
+	  }
+  }
+  
+
