@@ -107,5 +107,17 @@ let n = prompt("enter the number");
 		  break;
 	  }
   }
+
+
+
+  let x='kumaresanmpi@gmail.com';
+  let y=''
+  for(i=0;i<x.length;i++){
+      if(x[i]=='@'){
+          continue;
+      }
+      y+=x[i]
+  }
+  console.log(y)
   
 
