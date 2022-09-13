@@ -94,7 +94,7 @@
 // 			   c+=n[k];
 //            }
 //        }
-       
+
 //    }  
 //    console.log(c)
 
@@ -109,26 +109,26 @@
 // 	  }
 //   }
 
-function small_large(grt){
-   let t =-1;
-   grt=grt.sort(function(a,b){returna-b})
-   if(grt==""){
-      console.log(t);
-   }else{
-      console.log(grt[0]);
-   }
-}
-let a= [10,8,11,20,15]
-let great=[];
-for(i=0;i<a.length;i++){
-   for(j=0;j<a.length;j++){
-      if(a[i]<a[j]){
-         great.push(a[j]);
-      }
-   }
-   small_large(great);
-   great=[];
-}
+// function small_large(grt){
+//    let t =-1;
+//    grt=grt.sort(function(a,b){returna-b})
+//    if(grt==""){
+//       console.log(t);
+//    }else{
+//       console.log(grt[0]);
+//    }
+// }
+// let a= [10,8,11,20,15]
+// let great=[];
+// for(i=0;i<a.length;i++){
+//    for(j=0;j<a.length;j++){
+//       if(a[i]<a[j]){
+//          great.push(a[j]);
+//       }
+//    }
+//    small_large(great);
+//    great=[];
+// }
 
 // split @ in mail id //
 
@@ -152,62 +152,109 @@ for(i=0;i<a.length;i++){
 //   let num  = k.match(/[0-9]/g);
 //   console.log(name);
 //   console.log(num)
-  
- /*  let x='sathishvivis6620@gmail.com';
-  let y=''
-   for(i=0;i<x.length;i++){
-    if(x[i]=='@'){
-        continue;
-    }
-    y+=x[i]
- }
-  console.log(y)
- */
 
- /// Write a program to calculate age using JS date///
-
-  function calculateage(age) { 
-    var x = Date.now() -age.getTime();
-    console.log(x);
-    var y = new Date(x); 
-    console.log(y);
-  
-    return Math.abs(y.getFullYear() -1970);
+/*  let x='sathishvivis6620@gmail.com';
+ let y=''
+  for(i=0;i<x.length;i++){
+   if(x[i]=='@'){
+       continue;
+   }
+   y+=x[i]
 }
-console.log(calculateage(new Date(1998, 06, 02))); 
+ console.log(y)
+*/
+
+/// Write a program to calculate age using JS date///
+
+//   function calculateage(age) { 
+//     var x = Date.now() -age.getTime();
+//     console.log(x);
+//     var y = new Date(x); 
+//     console.log(y);
+
+//     return Math.abs(y.getFullYear() -1970);
+// }
+// console.log(calculateage(new Date(1998, 06, 02))); 
 
 
-let x = new Date();
- let y  = prompt("enter the year")
- let z = x.getFullYear();
- let m = z-y ;
- console.log(m);
+// let x = new Date();
+//  let y  = prompt("enter the year")
+//  let z = x.getFullYear();
+//  let m = z-y ;
+//  console.log(m);
 
 
- ///Write a program to Check whether a date is a weekend date or not///
+///Write a program to Check whether a date is a weekend date or not///
 
-var date=new Date("2022-09-11");
-var Day = date.getDay();
+// var date=new Date("2022-09-11");
+// var Day = date.getDay();
 // console.log(Day);
-var Weekend = (Day === 6) || (Day === 0);
- Weekend?console.log('weekend'):console.log('not weekend')
+// var Weekend = (Day === 6) || (Day === 0);
+//  Weekend?console.log('weekend'):console.log('not weekend')
 
-//
+// //
 
-var date=new Date("2022-09-12");
-var Day = date.getDay();
-var Weekend = (Day === 6) || (Day === 0);
-if(Weekend){
-   console.log("a Weekend");
-} else {
-   console.log(" a not a Weekend");
-}
+// var date=new Date("2022-09-12");
+// var Day = date.getDay();
+// var Weekend = (Day === 6) || (Day === 0);
+// if(Weekend){
+//    console.log("a Weekend");
+// } else {
+//    console.log(" a not a Weekend");
+// }
 
 
-function age(birthYear){
-let today = new Date();
-let bronDate = new Date(birthYear);
-let myAge=today.getFullYear() - bronDate.getFullYear();
+// function age(birthYear){
+// let today = new Date();
+// let bronDate = new Date(birthYear);
+// let myAge =today.getFullYear() - bronDate.getFullYear();
+// console.log(myAge);
+// }
+// age('1998-06-02');
 
-}
-console.log(age('1998-06-02'));
+
+// ///Given an array with numbers, write a program that prints nearest larger value of each index position
+
+
+// let x = [10, 15, 20, 30, 13, 11]
+// let y = x.sort(function (a, b) {
+//    return a - b
+// })
+
+//    for (i = 0; i < y.length; i++) {
+//    let next = -1;
+//    for (j = 0; j < y.length; j++) {
+//       if (y[i] < y[j]) {
+//          next = y[j];
+//          break;
+//       }
+
+//    }
+//    console.log(next)
+// }
+
+// Get time differences in hours between two dates//
+function hours(date1, date2){
+ 
+  let time =(date2.getTime() - date1.getTime());
+  time = (60 * 60);
+  return (time);
+  
+  
+ }
+
+date1 = new Date(2022,09,11);
+date2 = new Date(2022,09,13);
+console.log(hours(date1, date2));
+
+
+///Get the week start date//
+
+ function getMonday(d) {
+   d = new Date(d);
+   var day = d.getDay(),
+       diff = d.getDate() - day + (day == 0 ? -6:1);
+   return new Date(d.setDate(diff));
+ }
+ 
+ getMonday(new Date()); 
