@@ -1,17 +1,19 @@
 // random color//
 
 // function randomcolor() {
-//     var x = Math.floor(Math.random() * 100);
+
+//      var x = Math.floor(Math.random() * 100);
 //     var y = Math.floor(Math.random() * 150);
-//     var z = Math. floor(Math.random() * 256 );
-//     var randomcolor = "rgb(" + x + "," + y + ","+z+")";
-
-//     console.log(randomcolor);
+//      var z = Math. floor(Math.random() * 256 );
+//   var randomcolor = "rgb(" + x + "," + y + ","+z+")";
 
 
-// }
+// console.log(randomcolor);
 
-// randomcolor();
+
+//  }
+//  randomcolor();
+
 
 // random num //
 
@@ -233,56 +235,70 @@
 //    console.log(next)
 // }
 
-// Get time differences in hours between two dates//
-function hours(date1, date2){
- 
-  let time =(date2.getTime() - date1.getTime());
-  time = (60 * 60);
-  return (time);
-  
-  
- }
-
-date1 = new Date(2022,09,11);
-date2 = new Date(2022,09,13);
-console.log(hours(date1, date2));
-
-
 ///Get the week start date//
 
- function getMonday(d) {
-   d = new Date(d);
-   var day = d.getDay(),
-       diff = d.getDate() - day + (day == 0 ? -6:1);
-   return new Date(d.setDate(diff));
- }
+//  function getMonday(d) {
+//    d = new Date(d);
+//    var day = d.getDay(),
+//        diff = d.getDate() - day + (day == 0 ? -6:1);
+//    return new Date(d.setDate(diff));
+//  }
  
- getMonday(new Date()); 
+//  getMonday(new Date()); 
 
+// Get time differences in hours between two dates//
 
- const date1 = "12 sep, 2022  ";
-const date2 = "13 sep, 2022 ";
-const date1Obj = new Date(date1);
-const date2Obj = new Date(date2);
-let y=date1Obj.getHours();
-let z=date2Obj.getHours();
-let c=z-y
-console.log(c)
+//  const date1 = "12 sep, 2022  ";
+// const date2 = "13 sep, 2022 ";
+// const date1Obj = new Date(date1);
+// const date2Obj = new Date(date2);
+// let y=date1Obj.getHours();
+// let z=date2Obj.getHours();
+// let c=z-y
+// console.log(c)
 
-function hours(date1, date2) 
- {
-
-  var time =(date1.getTime() - date2.getTime()) / 1000;
-  time /= (60 * 60);
-  return Math.abs((time));
+// function hours(date1, date2) {
+//   var time =(date1.getTime() - date2.getTime()) / 1000;
+//   time /= (60 * 60);
+//   return Math.abs((time));
   
- }
+//  }
 
-date1 = new Date(2022,09,13);
-date2 = new Date(2022,09,11);
-console.log(hours(date1, date2));
+// date1 = new Date(2022,09,13);
+// date2 = new Date(2022,09,11);
+// console.log(hours(date1, date2));
 
 
-date1 = new Date("september 13, 2022 16:10:00");
-date2 = new Date("september 12, 2022 20:10:00");
-console.log(hours(date1, date2));
+// date1 = new Date("september 13, 2022 16:10:00");
+// date2 = new Date("september 12, 2022 20:10:00");
+// console.log(hours(date1, date2));
+
+// random color user click//
+// let v=document.getElementById('randomcolor')
+// function randomcolor() {
+
+//      var x = Math.floor(Math.random() * 100);
+//     var y = Math.floor(Math.random() * 150);
+//      var z = Math. floor(Math.random() * 256 );
+//   var randomcolor = "rgb(" + x + "," + y + ","+z+")";
+//   document.getElementById('vivi').style.backgroundColor=randomcolor;
+
+// console.log(randomcolor);
+
+
+//  }
+//  v.addEventListener('click',randomcolor);
+
+ //user input  enter the color name //
+ let v=document.getElementById('btn');
+ 
+function btnclick(){
+ let color=document.getElementById('inputcolor').value;
+ document.getElementById('inputcolor').style.background=color;
+ 
+ console.log(color);
+}
+v.addEventListener('click',btnclick)
+
+
+
