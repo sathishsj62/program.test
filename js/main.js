@@ -235,7 +235,7 @@ age('1998-06-02');
 //    console.log(next)
 // }
 
-///Get the week start date//
+///Get the week first day//
 
  function getMonday(d) {
    d = new Date(d);
@@ -245,6 +245,82 @@ age('1998-06-02');
  }
  
  getMonday(new Date()); 
+
+// switch case method//
+
+let a=new Date('2022,09,27');
+let b=a.getDay();
+let month1=a.getMonth();
+let year=a.getFullYear();
+let day;
+let month;
+if(b==1){
+switch(b){
+    case 0:
+        day='sunday';
+        break;
+         case 1:
+        day='monday';
+        break;
+         case 2:
+        day='tuesay';
+        break;
+         case 3:
+        day='wednesday';
+        break;
+
+        day='thursday';
+        break;
+         case 5:
+        day='friday';
+        break;
+         case 6:
+        day='saturday';
+        break;
+}
+switch(month1){
+    case 0:
+        month='january';
+        break;
+         case 1:
+        month='february';
+        break;
+         case 2:
+        month='march';
+        break;
+         case 3:
+        month='april';
+        break;
+         case 4:
+       month= 'may';
+        break;
+         case 5:
+        month='june';
+        break;
+         case 6:
+        month='july';
+        break;
+         case 7:
+      month='august';
+        break;
+         case 8:
+        month='september';
+        break;
+         case 9:
+        month='october';
+        break;
+         case 10:
+        month='november';
+        break;
+         case 11:
+       month='december';
+        break;
+}
+console.log(`${day},${month},${year}`)
+}
+else{
+    console.log('not week first')
+}
 
 // Get time differences in hours between two dates//
 
@@ -322,3 +398,11 @@ for(i=x.length-1;i>=0;i--){
 let y=x.split('').reverse().join('');
 x==y?console.log('palindrome'):console.log('not palindrom')
 console.log(y) 
+
+
+
+
+
+
+
+
