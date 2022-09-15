@@ -168,15 +168,15 @@
 
 /// Write a program to calculate age using JS date///
 
-//   function calculateage(age) { 
-//     var x = Date.now() -age.getTime();
-//     console.log(x);
-//     var y = new Date(x); 
-//     console.log(y);
+  function calculateage(age) { 
+    var x = Date.now() -age.getTime();
+    console.log(x);
+    var y = new Date(x); 
+    console.log(y);
 
-//     return Math.abs(y.getFullYear() -1970);
-// }
-// console.log(calculateage(new Date(1998, 06, 02))); 
+    return Math.abs(y.getFullYear() -1970);
+}
+console.log(calculateage(new Date(1998, 06, 02))); 
 
 
 // let x = new Date();
@@ -188,31 +188,31 @@
 
 ///Write a program to Check whether a date is a weekend date or not///
 
-// var date=new Date("2022-09-11");
-// var Day = date.getDay();
-// console.log(Day);
-// var Weekend = (Day === 6) || (Day === 0);
-//  Weekend?console.log('weekend'):console.log('not weekend')
-
-// //
-
-// var date=new Date("2022-09-12");
-// var Day = date.getDay();
-// var Weekend = (Day === 6) || (Day === 0);
-// if(Weekend){
-//    console.log("a Weekend");
-// } else {
-//    console.log(" a not a Weekend");
-// }
+var date=new Date("2022-09-11");
+var Day = date.getDay();
+console.log(Day);
+var Weekend = (Day === 6) || (Day === 0);
+ Weekend?console.log('weekend'):console.log('not weekend')
 
 
-// function age(birthYear){
-// let today = new Date();
-// let bronDate = new Date(birthYear);
-// let myAge =today.getFullYear() - bronDate.getFullYear();
-// console.log(myAge);
-// }
-// age('1998-06-02');
+
+var date=new Date("2022-09-12");
+var Day = date.getDay();
+var Weekend = (Day === 6) || (Day === 0);
+if(Weekend){
+   console.log("a Weekend");
+} else {
+   console.log(" a not a Weekend");
+}
+
+
+function age(birthYear){
+let today = new Date();
+let bronDate = new Date(birthYear);
+let myAge =today.getFullYear() - bronDate.getFullYear();
+console.log(myAge);
+}
+age('1998-06-02');
 
 
 // ///Given an array with numbers, write a program that prints nearest larger value of each index position
@@ -237,59 +237,61 @@
 
 ///Get the week start date//
 
-//  function getMonday(d) {
-//    d = new Date(d);
-//    var day = d.getDay(),
-//        diff = d.getDate() - day + (day == 0 ? -6:1);
-//    return new Date(d.setDate(diff));
-//  }
+ function getMonday(d) {
+   d = new Date(d);
+   var day = d.getDay(),
+       diff = d.getDate() - day + (day == 0 ? -6:1);
+   return new Date(d.setDate(diff));
+ }
  
-//  getMonday(new Date()); 
+ getMonday(new Date()); 
 
 // Get time differences in hours between two dates//
 
-//  const date1 = "12 sep, 2022  ";
-// const date2 = "13 sep, 2022 ";
-// const date1Obj = new Date(date1);
-// const date2Obj = new Date(date2);
-// let y=date1Obj.getHours();
-// let z=date2Obj.getHours();
-// let c=z-y
-// console.log(c)
+ const date1 = "12 sep, 2022  ";
+const date2 = "13 sep, 2022 ";
+const date1Obj = new Date(date1);
+const date2Obj = new Date(date2);
+let y=date1Obj.getHours();
+let z=date2Obj.getHours();
+let c=z-y
+console.log(c)
 
-// function hours(date1, date2) {
-//   var time =(date1.getTime() - date2.getTime()) / 1000;
-//   time /= (60 * 60);
-//   return Math.abs((time));
+function hours(date1, date2) {
+  var time =(date1.getTime() - date2.getTime()) / 1000;
+  time /= (60 * 60);
+  return Math.abs((time));
   
-//  }
+ }
 
-// date1 = new Date(2022,09,13);
-// date2 = new Date(2022,09,11);
-// console.log(hours(date1, date2));
-
-
-// date1 = new Date("september 13, 2022 16:10:00");
-// date2 = new Date("september 12, 2022 20:10:00");
-// console.log(hours(date1, date2));
-
-// random color user click//
-// let v=document.getElementById('randomcolor')
-// function randomcolor() {
-
-//      var x = Math.floor(Math.random() * 100);
-//     var y = Math.floor(Math.random() * 150);
-//      var z = Math. floor(Math.random() * 256 );
-//   var randomcolor = "rgb(" + x + "," + y + ","+z+")";
-//   document.getElementById('vivi').style.backgroundColor=randomcolor;
-
-// console.log(randomcolor);
+date1 = new Date(2022,09,13);
+date2 = new Date(2022,09,11);
+console.log(hours(date1, date2));
 
 
-//  }
-//  v.addEventListener('click',randomcolor);
+date1 = new Date("september 13, 2022 16:10:00");
+date2 = new Date("september 12, 2022 20:10:00");
+console.log(hours(date1, date2));
+
+//random color user click//
+
+let v=document.getElementById('randomcolor')
+function randomcolor() {
+
+     var x = Math.floor(Math.random() * 100);
+    var y = Math.floor(Math.random() * 150);
+     var z = Math. floor(Math.random() * 256 );
+  var randomcolor = "rgb(" + x + "," + y + ","+z+")";
+  document.getElementById('vivi').style.backgroundColor=randomcolor;
+
+console.log(randomcolor);
+
+
+ }
+ v.addEventListener('click',randomcolor);
 
  //user input  enter the color name //
+
  let v=document.getElementById('btn');
  
 function btnclick(){
@@ -300,5 +302,23 @@ function btnclick(){
 }
 v.addEventListener('click',btnclick)
 
+// palindrome //
 
+let x='hello';
+ let y=''
+for(i=x.length-1;i>=0;i--){
+   y+=x[i]
+ }
+ if(x==y){
+    console.log('it is palindrome')
+ }
+ else{
+     console.log('it is not palindrome')
+} 
 
+//using induild method//
+
+ let x='akka';
+let y=x.split('').reverse().join('');
+x==y?console.log('palindrome'):console.log('not palindrom')
+console.log(y) 
