@@ -13,6 +13,7 @@ function x(a, b) {
     return c;
 }
 
+
 let m, h;
 let f = prompt("enter the first string");
 let s = prompt("enter the second string");
@@ -20,11 +21,14 @@ let v = ["a", "e", "i", "o", "u", "A", "E", "I", "O", "U"];
 m = x(f, v);
 h = x(s, v);
 if (m == h) {
-    console.log("the both string has same vowels");
+    // console.log("the both string has same vowels");
+    document.getElementById('heading').innerHTML='the both string are same vowels';
 } else if (m > h) {
     console.log("the first string has more vowels");
+    document.getElementById('heading').innerHTML='the first string has more vowels';
 } else {
     console.log("the second string has more vowels");
+    document.getElementById('heading').innerHTML='the second string has more vowels';
 }
 
 // how many vowels in name to printe the num//
