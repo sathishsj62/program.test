@@ -3,12 +3,12 @@
 
 let a='sathishviviis6620@gmail.com';
 let b='';
-for(i=0;i<x.length;i++){
+for(i=0;i<a.length;i++){
     if(a[i]=='@'){
         continue;
     }
     b+=a[i];
-console.log(y);
+console.log(b);
 
 // using the inbuild method//
 
@@ -20,3 +20,4 @@ let name = k.match(/[a-z]/g);
 let num  = k.match(/[0-9]/g);
 console.log(name);
 console.log(num);
+
